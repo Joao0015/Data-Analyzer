@@ -1,0 +1,24 @@
+# Ambiente Virtual
+.venv/
+venv/
+env/
+bin/
+lib/
+share/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cache do Streamlit
+.streamlit/config.toml
+
+# Arquivos de Sistema
+.DS_Store
+Thumbs.db
+
+# Dados (Opcional: use se não quiser subir arquivos CSV pesados)
+*.csv
+*.xlsx
+*.txt
