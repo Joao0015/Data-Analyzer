@@ -64,33 +64,6 @@ def exibir_info(df, nome_df):
     st.write(df.isnull().sum())
 
     st.divider()
-    st.write("### 📊 Análise Gráfica")
-
-    aba_graf1, aba_graf2 = st.tabs(["Mapa de Calor (Correlação)", "Distribuição de Colunas"])
-
-    with aba_graf1:
-        # Pegamos apenas as colunas que são números
-        df_numerico = df.select_dtypes(include=['number'])
-        
-        if not df_numerico.empty:
-            fig, ax = plt.subplots(figsize=(10, 6))
-            # Criamos o mapa de calor com o Seaborn
-            sns.heatmap(df_numerico.corr(), annot=False, cmap='coolwarm', ax=ax)
-            st.pyplot(fig)
-        else:
-            st.warning("Não existem colunas numéricas para criar o mapa de calor.")
-
-    with aba_graf2:
-        st.write("#### Como os valores estão espalhados?")
-        # Deixamos o usuário escolher qual coluna numérica ele quer ver
-        coluna_alvo = st.selectbox("Selecione uma coluna para ver a distribuição:", df_numerico.columns, key=f"select_{nome_df}")
-        
-        if coluna_alvo:
-            fig, ax = plt.subplots(figsize=(8, 4))
-            sns.histplot(df[coluna_alvo], kde=True, color="skyblue", ax=ax)
-            st.pyplot(fig)
-    
-
 # ---- SIDEBAR ----
 st.sidebar.header("Configurações")
 
