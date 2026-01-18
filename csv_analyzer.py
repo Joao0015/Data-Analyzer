@@ -77,7 +77,7 @@ if not possui_header:
     texto_colunas = st.sidebar.text_area("Nomes das colunas:")
     
     if texto_colunas:
-        # Limpeza dupla para tirar espaços e aspas (conforme Turn 16)
+        # Limpeza dupla para tirar espaços e aspas 
         custom_columns = [c.strip().strip("'\"") for c in texto_colunas.split(',')]
 
 arquivo1 = st.sidebar.file_uploader("Fazer uplodad do arquivo que deseja visualizar: ", type=["xlsx", "csv", "txt"])
@@ -89,7 +89,7 @@ if arquivo1 is not None:
     arquivo2 = st.sidebar.file_uploader("Fazer upload do segundo arquivo se desejar: ", type=["xlsx", "csv", "txt"])
 
     if arquivo2 is not None:
-        # 1. Criamos três abas agora (conforme sua solicitação no Turn 19)
+        #Criamos três abas 
         aba1, aba2, aba3 = st.tabs(["Arquivo 1", "Arquivo 2", "📊 Comparação"])
         
         df2 = carregar_dados(arquivo2, possui_header, custom_columns)
@@ -151,7 +151,7 @@ if arquivo1 is not None:
                     st.write(df2[coluna_alvo].value_counts())
                     st.write(f"Valores únicos: {df2[coluna_alvo].unique()}")
                     
-                    # Identifica o que só tem no Teste (conforme sua imagem KDD)
+                    # Identifica o que só tem no Teste
                     diff2 = u2 - u1
                     if diff2: st.error(f"Apenas no Arquivo 2: `{list(diff2)}`")
 
