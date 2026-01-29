@@ -10,7 +10,7 @@ Ferramenta simples feita em Python e Streamlit para visualizar e comparar datase
 * **Análise Visual**: Gera gráficos de correlação (Heatmap) e distribuição automaticamente.
 * **Comparação**: Aba dedicada para comparar arquivos de Treino e Teste, mostrando diferenças de colunas e valores.
 
-### 🚀 Como usar
+### 🚀 Como usar localmente
 
 1. **Instale as dependências**:
 ```bash
